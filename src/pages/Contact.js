@@ -54,71 +54,45 @@ function Contact() {
     <>
       <Navbar />
 
-      {/* ── HERO ── */}
+      {/* ── CONTACT PERSON CARD ── */}
       <motion.section
-        className="page-hero"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
+        className="contact-persons-section"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        style={{ paddingTop: "140px", paddingBottom: "20px" }}
       >
-        <div className="blur-circle blur-one"></div>
-        <div className="blur-circle blur-two"></div>
-
         <div className="container">
-          <motion.p
-            className="hero-subtitle"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            GET IN TOUCH
-          </motion.p>
-
-          <motion.h1
-            className="page-hero-title gradient-text"
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          >
-            Let's Build
-            <br />Something Great
-          </motion.h1>
-
-          <motion.p
-            className="hero-text"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 1 }}
-          >
-            Tell us about your packaging or printing project. We'll get
-            back to you within 24 hours with a custom quote.
-          </motion.p>
+          <div style={{ maxWidth: "420px", margin: "0 auto" }}>
+            <motion.div
+              className="cp-card"
+              whileHover={{ y: -12 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="cp-avatar"><span>PP</span></div>
+              <div className="cp-badge">Sales & Enquiry</div>
+              <h3 className="cp-name">Pooja Patel</h3>
+              <p className="cp-title">Sales Manager</p>
+              <div className="cp-divider"></div>
+              <div className="cp-actions">
+                <a href="tel:+919999999999" className="cp-link cp-link-phone">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .9h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+                  </svg>
+                  +91 99999 99999
+                </a>
+                <a href="mailto:info@printvista.com" className="cp-link cp-link-email">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                  info@printvista.com
+                </a>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </motion.section>
-<div style={{ maxWidth: "420px", margin: "0 auto" }}>
-  <motion.div className="cp-card" whileHover={{ y: -12 }} transition={{ duration: 0.3 }}>
-    <div className="cp-avatar"><span>PP</span></div>
-    <div className="cp-badge">Sales & Enquiry</div>
-    <h3 className="cp-name">Pooja Patel</h3>
-    <p className="cp-title">Sales Manager</p>
-    <div className="cp-divider"></div>
-    <div className="cp-actions">
-      <a href="tel:+919999999999" className="cp-link cp-link-phone">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .9h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
-        </svg>
-        +91 99999 99999
-      </a>
-      <a href="mailto:info@printvista.com" className="cp-link cp-link-email">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-          <polyline points="22,6 12,13 2,6" />
-        </svg>
-        info@printvista.com
-      </a>
-    </div>
-  </motion.div>
-</div>
 
       {/* ── QUOTE FORM ── */}
       <motion.section className="quote-section" {...fadeUp}>
@@ -163,7 +137,6 @@ function Contact() {
                 </div>
               </div>
 
-              {/* Office Info */}
               <div className="office-box">
                 <h4>Our Office</h4>
                 <p>Surat, Gujarat</p>
@@ -206,7 +179,6 @@ function Contact() {
                       <input
                         type="text"
                         name="name"
-                        placeholder="Raj Patel"
                         value={formData.name}
                         onChange={handleChange}
                         required
@@ -217,7 +189,6 @@ function Contact() {
                       <input
                         type="text"
                         name="company"
-                        placeholder="Your Company Ltd."
                         value={formData.company}
                         onChange={handleChange}
                       />
@@ -230,7 +201,6 @@ function Contact() {
                       <input
                         type="tel"
                         name="phone"
-                        placeholder="+91 98765 43210"
                         value={formData.phone}
                         onChange={handleChange}
                         required
@@ -301,24 +271,39 @@ function Contact() {
         </div>
       </motion.section>
 
-      {/* ── CTA ── */}
-      <section className="cta-section">
-        <div className="container cta-container">
-          <p className="section-subtitle">QUICK CONNECT</p>
-          <h2 className="cta-title">
-            Prefer to Call?
-          </h2>
-          <p className="cta-text">
-            Our team is available Monday to Saturday. Reach us directly
-            for fast responses on bulk orders and urgent requirements.
-          </p>
-          <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="tel:+919876543210">
-              <button className="cta-btn">📞 Call Now</button>
-            </a>
-          </div>
+      {/* ── HERO (bottom) ── */}
+      <motion.section
+        style={{ padding: "80px 0 60px", textAlign: "center" }}
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="blur-circle blur-one"></div>
+        <div className="blur-circle blur-two"></div>
+        <div className="container">
+          <motion.h1
+            className="page-hero-title gradient-text"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            Let's Build
+            <br />Something Great
+          </motion.h1>
+          <motion.p
+            className="hero-text"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+          >
+            Tell us about your packaging or printing project. We'll get
+            back to you within 24 hours with a custom quote.
+          </motion.p>
         </div>
-      </section>
+      </motion.section>
 
       {/* ── FOOTER ── */}
       <footer className="footer">
@@ -335,7 +320,7 @@ function Contact() {
             <a href="/contact">Contact</a>
           </div>
           <div className="footer-contact">
-            <p>+91 98765 43210</p>
+            <p>+91 99999 99999</p>
             <p>info@printvista.com</p>
             <p>Surat, Gujarat</p>
           </div>

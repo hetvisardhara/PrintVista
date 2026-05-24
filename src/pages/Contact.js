@@ -55,7 +55,8 @@ function Contact() {
       <Navbar />
  {/* ── HERO  ── */}
       <motion.section
-        style={{ padding: "80px 0 60px", textAlign: "center" }}
+
+          style={{ padding: "120px 0 60px", textAlign: "center" }}  
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

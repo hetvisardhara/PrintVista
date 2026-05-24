@@ -401,7 +401,6 @@ function Clients() {
           </div>
           <div className="footer-contact">
             <p>+91 98765 43210</p>
-            <p>+91 99999 99999</p>
             <p>info@printvista.com</p>
             <p>Surat, Gujarat</p>
           </div>

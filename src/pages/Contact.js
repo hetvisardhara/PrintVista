@@ -282,7 +282,7 @@ function Contact() {
             <a href="/contact">Contact</a>
           </div>
           <div className="footer-contact">
-            <p>+91 99999 99999</p>
+            <p>+91 98765 43210</p>
             <p>info@printvista.com</p>
             <p>Surat, Gujarat</p>
           </div>

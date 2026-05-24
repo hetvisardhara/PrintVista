@@ -53,6 +53,39 @@ function Contact() {
   return (
     <>
       <Navbar />
+ {/* ── HERO  ── */}
+      <motion.section
+        style={{ padding: "80px 0 60px", textAlign: "center" }}
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="blur-circle blur-one"></div>
+        <div className="blur-circle blur-two"></div>
+        <div className="container">
+          <motion.h1
+            className="page-hero-title gradient-text"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            Let's Build
+            <br />Something Great
+          </motion.h1>
+          <motion.p
+            className="hero-text"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+          >
+            Tell us about your packaging or printing project. We'll get
+            back to you within 24 hours with a custom quote.
+          </motion.p>
+        </div>
+      </motion.section>
 
       {/* ── CONTACT PERSON CARD ── */}
       <motion.section
@@ -60,7 +93,7 @@ function Contact() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        style={{ paddingTop: "140px", paddingBottom: "20px" }}
+   style={{ paddingTop: "20px", paddingBottom: "20px" }}
       >
         <div className="container">
           <div style={{ maxWidth: "420px", margin: "0 auto" }}>
@@ -271,39 +304,7 @@ function Contact() {
         </div>
       </motion.section>
 
-      {/* ── HERO (bottom) ── */}
-      <motion.section
-        style={{ padding: "80px 0 60px", textAlign: "center" }}
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="blur-circle blur-one"></div>
-        <div className="blur-circle blur-two"></div>
-        <div className="container">
-          <motion.h1
-            className="page-hero-title gradient-text"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            Let's Build
-            <br />Something Great
-          </motion.h1>
-          <motion.p
-            className="hero-text"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-          >
-            Tell us about your packaging or printing project. We'll get
-            back to you within 24 hours with a custom quote.
-          </motion.p>
-        </div>
-      </motion.section>
+     
 
       {/* ── FOOTER ── */}
       <footer className="footer">

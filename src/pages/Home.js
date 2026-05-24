@@ -3,10 +3,9 @@ import { useInView } from "react-intersection-observer";
 import Loader from "../components/Loader";
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
-
-import work1 from "../assets/work1.jpg";
-import work2 from "../assets/work2.jpg";
-import work3 from "../assets/work3.jpg";
+import fmcg from "../assets/fmcg.jpeg";
+import brandidentity from "../assets/brandidentity.jpeg";
+import giftwrap from "../assets/giftwrap.jpeg";
 
 function Home() {
 
@@ -279,63 +278,60 @@ function Home() {
 
           </div>
         </motion.section>
+{/* ── PORTFOLIO ── */}
+<motion.section
+  className="portfolio-section"
+  id="portfolio"
+  initial={{ opacity: 0, y: 80 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+>
+  <div className="container">
+    <p className="section-subtitle">PORTFOLIO</p>
+    <h2 className="section-title">Selected Work</h2>
 
-        {/* ── PORTFOLIO ── */}
-        <motion.section
-          className="portfolio-section"
-          id="portfolio"
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="container">
+    <div className="portfolio-grid">
 
-            <p className="section-subtitle">PORTFOLIO</p>
-            <h2 className="section-title">Selected Work</h2>
+      <motion.div
+        className="portfolio-card-new"
+        whileHover={{ y: -15 }}
+        transition={{ duration: 0.4 }}
+      >
+        <img src={fmcg} alt="FMCG Boxes" />
+        <div className="portfolio-card-label">
+          <h3>FMCG Boxes</h3>
+          <p>Packaging Design</p>
+        </div>
+      </motion.div>
 
-            <div className="portfolio-grid">
+      <motion.div
+        className="portfolio-card-new"
+        whileHover={{ y: -15 }}
+        transition={{ duration: 0.4 }}
+      >
+        <img src={brandidentity} alt="Brand Identity" />
+        <div className="portfolio-card-label">
+          <h3>Brand Identity</h3>
+          <p>Graphic Design</p>
+        </div>
+      </motion.div>
 
-              <motion.div
-                className="portfolio-card"
-                whileHover={{ y: -15 }}
-                transition={{ duration: 0.4 }}
-              >
-                <img src={work1} alt="packaging" />
-                <div className="portfolio-overlay">
-                  <h3>Pharma Packaging</h3>
-                  <p>Offset Printing</p>
-                </div>
-              </motion.div>
+      <motion.div
+        className="portfolio-card-new"
+        whileHover={{ y: -15 }}
+        transition={{ duration: 0.4 }}
+      >
+        <img src={giftwrap} alt="Gift Wrappers" />
+        <div className="portfolio-card-label">
+          <h3>Gift Wrappers</h3>
+          <p>Custom Packaging</p>
+        </div>
+      </motion.div>
 
-              <motion.div
-                className="portfolio-card"
-                whileHover={{ y: -15 }}
-                transition={{ duration: 0.4 }}
-              >
-                <img src={work2} alt="boxes" />
-                <div className="portfolio-overlay">
-                  <h3>FMCG Boxes</h3>
-                  <p>Packaging Design</p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                className="portfolio-card"
-                whileHover={{ y: -15 }}
-                transition={{ duration: 0.4 }}
-              >
-                <img src={work3} alt="branding" />
-                <div className="portfolio-overlay">
-                  <h3>Brand Identity</h3>
-                  <p>Graphic Design</p>
-                </div>
-              </motion.div>
-
-            </div>
-
-          </div>
-        </motion.section>
+    </div>
+  </div>
+</motion.section>
 
         {/* ── CONTACT ── */}
         <motion.section

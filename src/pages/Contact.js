@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
-
+import Footer from "../components/Footer";
 function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -267,30 +267,7 @@ function Contact() {
 
      
 
-      {/* ── FOOTER ── */}
-      <footer className="footer">
-        <div className="container footer-container">
-          <div className="footer-brand">
-            <h2>Print<span style={{ color: "#2563eb" }}>Vista</span></h2>
-            <p>Our Passion Is Your Impression</p>
-          </div>
-          <div className="footer-links">
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/portfolio">Portfolio</a>
-            <a href="/clients">Our Clients</a>
-            <a href="/contact">Contact</a>
-          </div>
-          <div className="footer-contact">
-            <p>+91 98765 43210</p>
-            <p>info@printvista.com</p>
-            <p>Surat, Gujarat</p>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <p>© 2026 All Rights Reserved — Print Vista</p>
-        </div>
-      </footer>
+     <Footer />
     </>
   );
 }

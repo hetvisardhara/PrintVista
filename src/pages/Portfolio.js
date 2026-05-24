@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 import adhesivetapes from "../assets/adhesivetapes.jpeg";
 import brandidentity from "../assets/brandidentity.JPG";
@@ -191,29 +192,7 @@ function Portfolio() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="footer">
-        <div className="container footer-container">
-          <div className="footer-brand">
-            <h2>Mukesh<span style={{ color: "#2563eb" }}>Graphics</span></h2>
-            <p>Our Passion Is Your Impression</p>
-          </div>
-          <div className="footer-links">
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/portfolio">Portfolio</a>
-            <a href="/contact">Contact</a>
-          </div>
-          <div className="footer-contact">
-            <p>+91 XXXXX XXXXX</p>
-            <p>info@mukeshgraphics.com</p>
-            <p>Bhavnagar, Gujarat</p>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <p>© 2026 All Rights Reserved — Mukesh Graphics</p>
-        </div>
-      </footer>
+<Footer />
     </>
   );
 }

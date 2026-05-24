@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import fmcg from "../assets/fmcg.jpeg";
 import brandidentity from "../assets/brandidentity.JPG";
 import giftwrap from "../assets/giftwrap.JPG";
+import Footer from "../components/Footer";
 
 function Home() {
 
@@ -341,43 +342,7 @@ function Home() {
           </div>
         </motion.section>
 
-        {/* ── FOOTER ── */}
-        <footer className="footer">
-          <div className="container footer-container">
-
-            <div className="footer-brand">
-              <h2>Print<span style={{ color: "#2563eb" }}>Vista</span></h2>
-              <p>Our Passion Is Your Impression</p>
-            </div>
-
-            <div className="footer-links">
-              <a href="/">Home</a>
-              <a href="/about">About</a>
-              <a href="/portfolio">Portfolio</a>
-              <a href="/contact">Contact</a>
-            </div>
-
-            <div className="footer-contact">
-              <h4 style={{ marginBottom: "14px", fontSize: "15px" }}>Get In Touch</h4>
-              <p>+91 XXXXX XXXXX</p>
-              <p>info@mukeshgraphics.com</p>
-              <p>Bhavnagar, Gujarat — 364004</p>
-            </div>
-
-            <div className="footer-hours">
-              <h4 style={{ marginBottom: "14px", fontSize: "15px" }}>Working Hours</h4>
-              <p>Mon – Fri: 9:00 AM – 7:00 PM</p>
-              <p>Saturday: 9:00 AM – 5:00 PM</p>
-              <p>Sunday: Closed</p>
-            </div>
-
-          </div>
-
-          <div className="footer-bottom">
-            <p>© 2026 All Rights Reserved — Print Vista</p>
-          </div>
-        </footer>
-
+       <Footer />
       </div>
     </>
   );

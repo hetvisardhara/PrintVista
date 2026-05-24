@@ -92,16 +92,6 @@ function Home() {
               </a>
             </motion.div>
 
-            <div className="floating-card card-one">
-              <h3>500+</h3>
-              <p>Happy Clients</p>
-            </div>
-
-            <div className="floating-card card-two">
-              <h3>15+</h3>
-              <p>Years of Excellence</p>
-            </div>
-
           </div>
         </motion.section>
 

@@ -75,7 +75,7 @@ function Home() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
             >
-              Mukesh Graphics delivers innovative packaging and printing
+              Print Vista delivers innovative packaging and printing
               solutions with premium quality, precise detailing, and on-time
               production for every business need.
             </motion.p>
@@ -140,7 +140,7 @@ function Home() {
 
             <div className="about-right">
               <p>
-                Since 2009, Mukesh Graphics has been a professionally managed
+                Since 2009, Print Vista has been a professionally managed
                 printing and packaging company specializing in mono cartons,
                 pharmaceutical boxes, FMCG packaging and customized printing
                 solutions.
@@ -368,21 +368,21 @@ function Home() {
 
               <div className="contact-person-card">
                 <div className="contact-person-avatar">MB</div>
-                <h3>Mr. Bhupat</h3>
+                <h3>Mr. Abc</h3>
                 <p className="contact-person-role">Sales & Enquiry</p>
                 <div className="contact-person-links">
-                  <a href="tel:+919426272081">📞 +91 94262 72081</a>
-                  <a href="mailto:info@mukeshgraphics.com">✉ info@mukeshgraphics.com</a>
+                  <a href="tel:+919426272081">📞 +91 98765 43210</a>
+                  <a href="mailto:info@printvista.com">✉ info@printvista.com</a>
                 </div>
               </div>
 
               <div className="contact-person-card">
                 <div className="contact-person-avatar">YP</div>
-                <h3>Mr. Yagnik</h3>
+                <h3>Mr. Xyz</h3>
                 <p className="contact-person-role">Sales & Support</p>
                 <div className="contact-person-links">
-                  <a href="tel:+919825982727">📞 +91 98259 82727</a>
-                  <a href="mailto:sales@mukeshgraphics.com">✉ sales@mukeshgraphics.com</a>
+                  <a href="tel:+919825982727">📞 +91 99999 99999</a>
+                  <a href="mailto:sales@printvista.com">✉ sales@printvista.com</a>
                 </div>
               </div>
 
@@ -393,7 +393,7 @@ function Home() {
 
               <div className="contact-info-box">
                 <h4>Our Office</h4>
-                <p>Plot No. 58, Vishwakarma Estate,<br />Chitra GIDC, Bhavnagar,<br />Gujarat — 364004</p>
+                <p><br />Chitra GIDC, Surat,<br />Gujarat — 364004</p>
               </div>
 
               <div className="contact-info-box">
@@ -454,15 +454,15 @@ function Home() {
             </div>
 
             <div className="footer-contact">
-              <p>+91 94262 72081</p>
-              <p>info@mukeshgraphics.com</p>
-              <p>Bhavnagar, Gujarat</p>
+              <p>+91 98765 43210</p>
+              <p>info@printvista.com</p>
+              <p>Surat, Gujarat</p>
             </div>
 
           </div>
 
           <div className="footer-bottom">
-            <p>© 2026 All Rights Reserved — Mukesh Graphics</p>
+            <p>© 2026 All Rights Reserved — Print Vista</p>
           </div>
         </footer>
 

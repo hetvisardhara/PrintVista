@@ -20,7 +20,7 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Build WhatsApp message
-    const msg = `Hello Mukesh Graphics!%0A%0A*Name:* ${formData.name}%0A*Company:* ${formData.company}%0A*Phone:* ${formData.phone}%0A*Email:* ${formData.email}%0A*Service Needed:* ${formData.service}%0A%0A*Message:*%0A${formData.message}`;
+    const msg = `Hello Print Vista!%0A%0A*Name:* ${formData.name}%0A*Company:* ${formData.company}%0A*Phone:* ${formData.phone}%0A*Email:* ${formData.email}%0A*Service Needed:* ${formData.service}%0A%0A*Message:*%0A${formData.message}`;
     window.open(`https://wa.me/919426272081?text=${msg}`, "_blank");
     setSubmitted(true);
   };
@@ -87,7 +87,7 @@ function Contact() {
           </h2>
 
           <div className="contact-persons-grid">
-            {/* Mr. Bhupat */}
+            {/* Mr. Abc */}
             <motion.div
               className="cp-card"
               whileHover={{ y: -12 }}
@@ -97,7 +97,7 @@ function Contact() {
                 <span>MB</span>
               </div>
               <div className="cp-badge">Sales & Enquiry</div>
-              <h3 className="cp-name">Mr. Bhupat</h3>
+              <h3 className="cp-name">Mr. Abc</h3>
               <p className="cp-title">Director</p>
 
               <div className="cp-divider"></div>
@@ -107,14 +107,14 @@ function Contact() {
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .9h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                   </svg>
-                  +91 94262 72081
+                  +91 98765 43210
                 </a>
-                <a href="mailto:info@mukeshgraphics.com" className="cp-link cp-link-email">
+                <a href="mailto:info@printverse.com" className="cp-link cp-link-email">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                     <polyline points="22,6 12,13 2,6" />
                   </svg>
-                  info@mukeshgraphics.com
+                  info@printverse.com
                 </a>
                 <a
                   href="https://wa.me/919426272081"
@@ -130,7 +130,7 @@ function Contact() {
               </div>
             </motion.div>
 
-            {/* Mr. Yagnik */}
+            {/* Mr. Xyz */}
             <motion.div
               className="cp-card"
               whileHover={{ y: -12 }}
@@ -140,7 +140,7 @@ function Contact() {
                 <span>YP</span>
               </div>
               <div className="cp-badge">Sales & Support</div>
-              <h3 className="cp-name">Mr. Yagnik</h3>
+              <h3 className="cp-name">Mr. Xyz</h3>
               <p className="cp-title">Sales Manager</p>
 
               <div className="cp-divider"></div>
@@ -150,14 +150,14 @@ function Contact() {
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .9h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                   </svg>
-                  +91 98259 82727
+                  +91 99999 99999
                 </a>
-                <a href="mailto:sales@mukeshgraphics.com" className="cp-link cp-link-email">
+                <a href="mailto:sales@printvista.com" className="cp-link cp-link-email">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                     <polyline points="22,6 12,13 2,6" />
                   </svg>
-                  sales@mukeshgraphics.com
+                  sales@printvista.com
                 </a>
                 <a
                   href="https://wa.me/919825982727"
@@ -224,8 +224,8 @@ function Contact() {
               <div className="office-box">
                 <h4>Our Office</h4>
                 <p>
-                  Plot No. 58, Vishwakarma Estate,<br />
-                  Chitra GIDC, Bhavnagar,<br />
+                  <br />
+                  Chitra GIDC, Surat,<br />
                   Gujarat — 364004
                 </p>
                 <div className="office-hours">
@@ -365,7 +365,7 @@ function Contact() {
           </h2>
           <div className="map-wrapper">
             <iframe
-              title="Mukesh Graphics Location"
+              title="Print Vista Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.3!2d72.15!3d21.77!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDQ2JzEyLjAiTiA3MsKwMDknMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
               width="100%"
               height="400"
@@ -407,7 +407,7 @@ function Contact() {
       <footer className="footer">
         <div className="container footer-container">
           <div className="footer-brand">
-            <h2>Mukesh<span style={{ color: "#2563eb" }}>Graphics</span></h2>
+            <h2>Print<span style={{ color: "#2563eb" }}>Verse</span></h2>
             <p>Our Passion Is Your Impression</p>
           </div>
           <div className="footer-links">
@@ -418,14 +418,14 @@ function Contact() {
             <a href="/contact">Contact</a>
           </div>
           <div className="footer-contact">
-            <p>+91 94262 72081</p>
-            <p>+91 98259 82727</p>
-            <p>info@mukeshgraphics.com</p>
-            <p>Bhavnagar, Gujarat</p>
+            <p>+91 98765 43210</p>
+            <p>+91 99999 99999</p>
+            <p>info@printvista.com</p>
+            <p>Surat, Gujarat</p>
           </div>
         </div>
         <div className="footer-bottom">
-          <p>© 2026 All Rights Reserved — Mukesh Graphics</p>
+          <p>© 2026 All Rights Reserved — Print Vista</p>
         </div>
       </footer>
     </>

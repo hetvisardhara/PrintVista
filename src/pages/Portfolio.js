@@ -200,7 +200,7 @@ function Portfolio() {
         <div className="container footer-container">
 
           <div className="footer-brand">
-            <h2>Mukesh<span style={{ color: "#2563eb" }}>Graphics</span></h2>
+            <h2>Print<span style={{ color: "#2563eb" }}>Vista</span></h2>
             <p>Our Passion Is Your Impression</p>
           </div>
 
@@ -213,13 +213,13 @@ function Portfolio() {
 
           <div className="footer-contact">
             <p>+91 XXXXX XXXXX</p>
-            <p>info@mukeshgraphics.com</p>
-            <p>Bhavnagar, Gujarat</p>
+            <p>info@printvista.com</p>
+            <p>Surat, Gujarat</p>
           </div>
 
         </div>
         <div className="footer-bottom">
-          <p>© 2026 All Rights Reserved — Mukesh Graphics</p>
+          <p>© 2026 All Rights Reserved —Print Vista</p>
         </div>
       </footer>
 

@@ -125,7 +125,7 @@ const industries = [
 const testimonials = [
   {
     quote:
-      "Mukesh Graphics consistently delivers exceptional quality. Our pharma packaging has never looked more professional.",
+      "Print Vista consistently delivers exceptional quality. Our pharma packaging has never looked more professional.",
     name: "Rajesh Shah",
     company: "Sun Pharma — Bhavnagar",
     initials: "RS",
@@ -289,7 +289,7 @@ function Clients() {
           </div>
 
           <p className="clients-note">
-            + hundreds more businesses across India trust Mukesh Graphics
+            + hundreds more businesses across India trust Print Vista
           </p>
         </div>
       </motion.section>
@@ -376,7 +376,7 @@ function Clients() {
             <br />Your Brand Packaging?
           </h2>
           <p className="cta-text">
-            Join 500+ businesses that trust Mukesh Graphics for
+            Join 500+ businesses that trust Print Vista for
             premium printing and packaging solutions.
           </p>
           <a href="/contact">
@@ -389,7 +389,7 @@ function Clients() {
       <footer className="footer">
         <div className="container footer-container">
           <div className="footer-brand">
-            <h2>Mukesh<span style={{ color: "#2563eb" }}>Graphics</span></h2>
+            <h2>Print<span style={{ color: "#2563eb" }}>Vista</span></h2>
             <p>Our Passion Is Your Impression</p>
           </div>
           <div className="footer-links">
@@ -400,14 +400,14 @@ function Clients() {
             <a href="/contact">Contact</a>
           </div>
           <div className="footer-contact">
-            <p>+91 94262 72081</p>
-            <p>+91 98259 82727</p>
-            <p>info@mukeshgraphics.com</p>
-            <p>Bhavnagar, Gujarat</p>
+            <p>+91 98765 43210</p>
+            <p>+91 99999 99999</p>
+            <p>info@printvista.com</p>
+            <p>Surat, Gujarat</p>
           </div>
         </div>
         <div className="footer-bottom">
-          <p>© 2026 All Rights Reserved — Mukesh Graphics</p>
+          <p>© 2026 All Rights Reserved — Print Vista</p>
         </div>
       </footer>
     </>

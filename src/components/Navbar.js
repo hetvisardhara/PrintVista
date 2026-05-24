@@ -26,7 +26,7 @@ function Navbar() {
 
         <Link to="/">
           <h2 className="logo">
-            Mukesh<span style={{ color: "#2563eb" }}>Graphics</span>
+            Print<span style={{ color: "#2563eb" }}>Vista</span>
           </h2>
         </Link>
 

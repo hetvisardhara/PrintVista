@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
 import fmcg from "../assets/fmcg.jpeg";
 import brandidentity from "../assets/brandidentity.JPG";
-import giftwrap from "../assets/giftwrap.jpeg";
+import giftwrap from "../assets/giftwrap.JPG";
 
 function Home() {
 

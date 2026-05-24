@@ -3,32 +3,38 @@ import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "../components/Navbar";
 
 import adhesivetapes from "../assets/adhesivetapes.jpeg";
+import brandidentity from "../assets/brandidentity.JPG";
 import chocolate from "../assets/chocolate.jpeg";
 import coffeesleves from "../assets/coffeesleves.jpeg";
 import custombags from "../assets/custombags.jpeg";
+import fmcg from "../assets/fmcg.jpeg";
 import foodwrap from "../assets/foodwrap.jpeg";
-import slenderpaper from "../assets/slenderpaper.jpeg";
-import soap from "../assets/soap.jpeg";
-import visitingcards from "../assets/visitingcards.jpeg";
+import giftwrap from "../assets/giftwrap.JPG";
 import labeldesign from "../assets/labeldesign.JPG";
 import mousepad from "../assets/mousepad.jpeg";
+import slenderpaper from "../assets/slenderpaper.jpeg";
+import soap from "../assets/soap.jpeg";
 import tags from "../assets/tags.JPG";
+import visitingcards from "../assets/visitingcards.jpeg";
 
 const products = [
   { id: 1,  name: "Self Adhesive Tapes",               category: "Packaging",  img: adhesivetapes },
-  { id: 2,  name: "Multipurpose Slender Paper Pouches", category: "Packaging",  img: slenderpaper  },
-  { id: 3,  name: "Custom Paper Bags",                  category: "Packaging",  img: custombags    },
-  { id: 4,  name: "Wrapping Paper",                     category: "Packaging",  img: foodwrap      },
-  { id: 5,  name: "Custom Coffee Sleeves",              category: "Packaging",  img: coffeesleves  },
-  { id: 6,  name: "Chocolate Boxes",                    category: "Boxes",      img: chocolate     },
-  { id: 7,  name: "Soap Boxes",                         category: "Boxes",      img: soap          },
-  { id: 8,  name: "Visiting Cards",                     category: "Stationery", img: visitingcards },
-  { id: 9,  name: "Label Design",                       category: "Stationery", img: labeldesign   },
-  { id: 10, name: "Mouse Pad",                          category: "Stationery", img: mousepad      },
-  { id: 11, name: "Tags",                               category: "Packaging",  img: tags          },
+  { id: 2,  name: "Brand Identity",                    category: "Branding",   img: brandidentity },
+  { id: 3,  name: "Chocolate Boxes",                   category: "Boxes",      img: chocolate     },
+  { id: 4,  name: "Custom Coffee Sleeves",             category: "Packaging",  img: coffeesleves  },
+  { id: 5,  name: "Custom Paper Bags",                 category: "Packaging",  img: custombags    },
+  { id: 6,  name: "FMCG Packaging",                   category: "Packaging",  img: fmcg          },
+  { id: 7,  name: "Wrapping Paper",                    category: "Packaging",  img: foodwrap      },
+  { id: 8,  name: "Gift Wrap",                         category: "Packaging",  img: giftwrap      },
+  { id: 9,  name: "Label Design",                      category: "Branding",   img: labeldesign   },
+  { id: 10, name: "Mouse Pad",                         category: "Stationery", img: mousepad      },
+  { id: 11, name: "Slender Paper Pouches",             category: "Packaging",  img: slenderpaper  },
+  { id: 12, name: "Soap Boxes",                        category: "Boxes",      img: soap          },
+  { id: 13, name: "Tags",                              category: "Packaging",  img: tags          },
+  { id: 14, name: "Visiting Cards",                    category: "Stationery", img: visitingcards },
 ];
 
-const categories = ["All", "Packaging", "Boxes", "Stationery"];
+const categories = ["All", "Packaging", "Boxes", "Branding", "Stationery"];
 
 function Portfolio() {
 

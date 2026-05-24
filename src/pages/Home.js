@@ -83,10 +83,10 @@ function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
             >
-              <a href="#portfolio">
+              <a href="/portfolio">
                 <button className="hero-btn">Explore Work</button>
               </a>
-              <a href="#contact">
+              <a href="/contact">
                 <button className="hero-btn-outline">Get In Touch</button>
               </a>
             </motion.div>
@@ -137,9 +137,9 @@ function Home() {
                 machinery, we ensure unmatched quality, consistency and on-time
                 delivery for every client across India.
               </p>
-              <a href="#contact">
+              <a href="/about">
                 <button className="hero-btn" style={{ marginTop: "20px" }}>
-                  Contact Us →
+                  Learn More →
                 </button>
               </a>
             </div>
@@ -159,37 +159,25 @@ function Home() {
               <div className="why-card">
                 <div className="why-icon">◈</div>
                 <h3>Premium Quality</h3>
-                <p>
-                  High-end offset & packaging print standards with attention
-                  to every detail.
-                </p>
+                <p>High-end offset & packaging print standards with attention to every detail.</p>
               </div>
 
               <div className="why-card">
                 <div className="why-icon">◉</div>
                 <h3>In-House Machinery</h3>
-                <p>
-                  5-color offset printing with online coater delivering
-                  precision and consistency every time.
-                </p>
+                <p>5-color offset printing with online coater delivering precision every time.</p>
               </div>
 
               <div className="why-card">
                 <div className="why-icon">◎</div>
                 <h3>100% Satisfaction</h3>
-                <p>
-                  Your complete satisfaction is our promise with quality
-                  guarantees and reliable service.
-                </p>
+                <p>Your complete satisfaction is our promise with quality guarantees.</p>
               </div>
 
               <div className="why-card">
                 <div className="why-icon">◐</div>
                 <h3>Fast Delivery</h3>
-                <p>
-                  Reliable production and timely dispatch for every order,
-                  no matter the scale.
-                </p>
+                <p>Reliable production and timely dispatch for every order, no matter the scale.</p>
               </div>
 
             </div>
@@ -203,30 +191,22 @@ function Home() {
             <div className="stats-grid">
 
               <div className="stat-box">
-                <h2>
-                  {statsInView ? <CountUp end={15} duration={2.5} /> : "0"}+
-                </h2>
+                <h2>{statsInView ? <CountUp end={15} duration={2.5} /> : "0"}+</h2>
                 <p>Years of Excellence</p>
               </div>
 
               <div className="stat-box">
-                <h2>
-                  {statsInView ? <CountUp end={500} duration={2.5} /> : "0"}+
-                </h2>
+                <h2>{statsInView ? <CountUp end={500} duration={2.5} /> : "0"}+</h2>
                 <p>Happy Clients</p>
               </div>
 
               <div className="stat-box">
-                <h2>
-                  {statsInView ? <CountUp end={100} duration={2.5} /> : "0"}%
-                </h2>
+                <h2>{statsInView ? <CountUp end={100} duration={2.5} /> : "0"}%</h2>
                 <p>Quality Focused</p>
               </div>
 
               <div className="stat-box">
-                <h2>
-                  {statsInView ? <CountUp end={18} duration={2.5} /> : "0"}+
-                </h2>
+                <h2>{statsInView ? <CountUp end={18} duration={2.5} /> : "0"}+</h2>
                 <p>Product Categories</p>
               </div>
 
@@ -252,149 +232,114 @@ function Home() {
 
               <div className="service-card">
                 <h3>Offset Printing</h3>
-                <p>
-                  5-color offset printing with online coater for vibrant,
-                  high-precision results on every print run.
-                </p>
+                <p>5-color offset printing with online coater for vibrant, high-precision results.</p>
               </div>
 
               <div className="service-card">
                 <h3>Packaging Design</h3>
-                <p>
-                  Mono cartons, FMCG boxes, pharma packaging — designed and
-                  manufactured with brand precision.
-                </p>
+                <p>Mono cartons, FMCG boxes, pharma packaging — designed with brand precision.</p>
               </div>
 
               <div className="service-card">
                 <h3>Graphic Design</h3>
-                <p>
-                  Modern packaging concepts with unique branding, typography
-                  and print-ready artwork.
-                </p>
+                <p>Modern packaging concepts with unique branding and print-ready artwork.</p>
               </div>
 
             </div>
 
           </div>
         </motion.section>
-{/* ── PORTFOLIO ── */}
-<motion.section
-  className="portfolio-section"
-  id="portfolio"
-  initial={{ opacity: 0, y: 80 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
-  viewport={{ once: true }}
->
-  <div className="container">
-    <p className="section-subtitle">PORTFOLIO</p>
-    <h2 className="section-title">Selected Work</h2>
 
-    <div className="portfolio-grid">
-
-      <motion.div
-        className="portfolio-card-new"
-        whileHover={{ y: -15 }}
-        transition={{ duration: 0.4 }}
-      >
-        <img src={fmcg} alt="FMCG Boxes" />
-        <div className="portfolio-card-label">
-          <h3>FMCG Boxes</h3>
-          <p>Packaging Design</p>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="portfolio-card-new"
-        whileHover={{ y: -15 }}
-        transition={{ duration: 0.4 }}
-      >
-        <img src={brandidentity} alt="Brand Identity" />
-        <div className="portfolio-card-label">
-          <h3>Brand Identity</h3>
-          <p>Graphic Design</p>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="portfolio-card-new"
-        whileHover={{ y: -15 }}
-        transition={{ duration: 0.4 }}
-      >
-        <img src={giftwrap} alt="Gift Wrappers" />
-        <div className="portfolio-card-label">
-          <h3>Gift Wrappers</h3>
-          <p>Custom Packaging</p>
-        </div>
-      </motion.div>
-
-    </div>
-  </div>
-</motion.section>
-
-        {/* ── CONTACT ── */}
+        {/* ── PORTFOLIO PREVIEW ── */}
         <motion.section
-          className="contact-section"
-          id="contact"
+          className="portfolio-section"
+          id="portfolio"
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className="container contact-container">
+          <div className="container">
+            <p className="section-subtitle">PORTFOLIO</p>
+            <h2 className="section-title">Selected Work</h2>
 
-            <p className="section-subtitle">CONTACT</p>
-            <h2 className="section-title">Let's Build Something Amazing</h2>
+            <div className="portfolio-grid">
 
-            {/* Contact Person Card — single */}
-            <div className="contact-cards">
-              <div className="contact-person-card">
-                <div className="contact-person-avatar">AP</div>
-                <h3>Abc Patel</h3>
-                <p className="contact-person-role">Sales & Enquiry</p>
-                <div className="contact-person-links">
-                  <a href="tel:+919876543210">📞 +91 98765 43210</a>
-                  <a href="mailto:info@printvista.com">✉ info@printvista.com</a>
+              <motion.div
+                className="portfolio-card-new"
+                whileHover={{ y: -15 }}
+                transition={{ duration: 0.4 }}
+              >
+                <img src={fmcg} alt="FMCG Boxes" />
+                <div className="portfolio-card-label">
+                  <h3>FMCG Boxes</h3>
+                  <p>Packaging Design</p>
                 </div>
-              </div>
+              </motion.div>
+
+              <motion.div
+                className="portfolio-card-new"
+                whileHover={{ y: -15 }}
+                transition={{ duration: 0.4 }}
+              >
+                <img src={brandidentity} alt="Brand Identity" />
+                <div className="portfolio-card-label">
+                  <h3>Brand Identity</h3>
+                  <p>Graphic Design</p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="portfolio-card-new"
+                whileHover={{ y: -15 }}
+                transition={{ duration: 0.4 }}
+              >
+                <img src={giftwrap} alt="Gift Wrappers" />
+                <div className="portfolio-card-label">
+                  <h3>Gift Wrappers</h3>
+                  <p>Custom Packaging</p>
+                </div>
+              </motion.div>
+
             </div>
 
-            {/* Address + Hours */}
-            <div className="contact-info-row">
-
-              <div className="contact-info-box">
-                <h4>Our Office</h4>
-                <p>Surat, Gujarat</p>
-              </div>
-
-              <div className="contact-info-box">
-                <h4>Working Hours</h4>
-                <p>Monday – Friday: 9:00 AM – 7:00 PM<br />Saturday: 9:00 AM – 5:00 PM<br />Sunday: Closed</p>
-              </div>
-
+            <div style={{ textAlign: "center", marginTop: "50px" }}>
+              <a href="/portfolio">
+                <button className="hero-btn">View All Work →</button>
+              </a>
             </div>
 
           </div>
         </motion.section>
 
-        {/* ── CTA ── */}
-        <section className="cta-section">
-          <div className="container cta-container">
-            <p className="section-subtitle">START YOUR PROJECT</p>
-            <h2 className="cta-title">
-              Let's Create Something
-              <br />Extraordinary Together
+        {/* ── BOLD CTA SECTION ── */}
+        <motion.section
+          className="bold-cta-section"
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <div className="container bold-cta-container">
+            <p className="bold-cta-tag">READY TO START?</p>
+            <h2 className="bold-cta-title">
+              Have a Packaging Idea?
+              <br />Let's Make It Premium.
             </h2>
-            <p className="cta-text">
-              From concept to finished product — premium printing and packaging
-              solutions that make your brand unforgettable.
+            <p className="bold-cta-text">
+              We craft modern packaging, luxury branding, and premium print
+              experiences for ambitious brands.
             </p>
-            <a href="/contact">
-              <button className="cta-btn">Request a Quote →</button>
-            </a>
+            <div className="bold-cta-buttons">
+              <a href="/contact">
+                <button className="bold-cta-btn-outline">Contact Us</button>
+              </a>
+              <a href="/contact">
+                <button className="bold-cta-btn-fill">Request Quote →</button>
+              </a>
+            </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* ── FOOTER ── */}
         <footer className="footer">
@@ -406,16 +351,24 @@ function Home() {
             </div>
 
             <div className="footer-links">
-              <a href="#home">Home</a>
-              <a href="#services">Services</a>
-              <a href="#portfolio">Portfolio</a>
-              <a href="#contact">Contact</a>
+              <a href="/">Home</a>
+              <a href="/about">About</a>
+              <a href="/portfolio">Portfolio</a>
+              <a href="/contact">Contact</a>
             </div>
 
             <div className="footer-contact">
-              <p>+91 98765 43210</p>
-              <p>info@printvista.com</p>
-              <p>Surat, Gujarat</p>
+              <h4 style={{ marginBottom: "14px", fontSize: "15px" }}>Get In Touch</h4>
+              <p>+91 XXXXX XXXXX</p>
+              <p>info@mukeshgraphics.com</p>
+              <p>Bhavnagar, Gujarat — 364004</p>
+            </div>
+
+            <div className="footer-hours">
+              <h4 style={{ marginBottom: "14px", fontSize: "15px" }}>Working Hours</h4>
+              <p>Mon – Fri: 9:00 AM – 7:00 PM</p>
+              <p>Saturday: 9:00 AM – 5:00 PM</p>
+              <p>Sunday: Closed</p>
             </div>
 
           </div>

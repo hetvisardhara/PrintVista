@@ -12,17 +12,35 @@ function Contact() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Build WhatsApp message
-    const msg = `Hello Print Vista!%0A%0A*Name:* ${formData.name}%0A*Company:* ${formData.company}%0A*Phone:* ${formData.phone}%0A*Email:* ${formData.email}%0A*Service Needed:* ${formData.service}%0A%0A*Message:*%0A${formData.message}`;
-    window.open(`https://wa.me/919426272081?text=${msg}`, "_blank");
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+
+    try {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        setError(data.error || "Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      setError("Unable to send. Please try again or call us directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const fadeUp = {
@@ -87,70 +105,55 @@ function Contact() {
           </h2>
 
           <div className="contact-persons-grid">
-            {/* Mr. Abc */}
+            {/* Abc Patel */}
             <motion.div
               className="cp-card"
               whileHover={{ y: -12 }}
               transition={{ duration: 0.3 }}
             >
               <div className="cp-avatar">
-                <span>MB</span>
+                <span>AP</span>
               </div>
               <div className="cp-badge">Sales & Enquiry</div>
-              <h3 className="cp-name">Mr. Abc</h3>
+              <h3 className="cp-name">Abc Patel</h3>
               <p className="cp-title">Director</p>
-
               <div className="cp-divider"></div>
-
               <div className="cp-actions">
-                <a href="tel:+919426272081" className="cp-link cp-link-phone">
+                <a href="tel:+919876543210" className="cp-link cp-link-phone">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .9h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                   </svg>
                   +91 98765 43210
                 </a>
-                <a href="mailto:info@printverse.com" className="cp-link cp-link-email">
+                <a href="mailto:info@printvista.com" className="cp-link cp-link-email">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                     <polyline points="22,6 12,13 2,6" />
                   </svg>
-                  info@printverse.com
-                </a>
-                <a
-                  href="https://wa.me/919426272081"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="cp-link cp-link-wa"
-                >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.882a.5.5 0 00.611.611l6.101-1.457A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.502-5.198-1.381l-.374-.214-3.878.927.951-3.793-.228-.389A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
-                  </svg>
-                  WhatsApp
+                  info@printvista.com
                 </a>
               </div>
             </motion.div>
 
-            {/* Mr. Xyz */}
+            {/* Abc Patel 2 */}
             <motion.div
               className="cp-card"
               whileHover={{ y: -12 }}
               transition={{ duration: 0.3 }}
             >
               <div className="cp-avatar cp-avatar-purple">
-                <span>YP</span>
+                <span>AP</span>
               </div>
               <div className="cp-badge">Sales & Support</div>
-              <h3 className="cp-name">Mr. Xyz</h3>
+              <h3 className="cp-name">Abc Patel</h3>
               <p className="cp-title">Sales Manager</p>
-
               <div className="cp-divider"></div>
-
               <div className="cp-actions">
-                <a href="tel:+919825982727" className="cp-link cp-link-phone">
+                <a href="tel:+919876543210" className="cp-link cp-link-phone">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .9h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                   </svg>
-                  +91 99999 99999
+                  +91 98765 43210
                 </a>
                 <a href="mailto:sales@printvista.com" className="cp-link cp-link-email">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -158,17 +161,6 @@ function Contact() {
                     <polyline points="22,6 12,13 2,6" />
                   </svg>
                   sales@printvista.com
-                </a>
-                <a
-                  href="https://wa.me/919825982727"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="cp-link cp-link-wa"
-                >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.882a.5.5 0 00.611.611l6.101-1.457A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.502-5.198-1.381l-.374-.214-3.878.927.951-3.793-.228-.389A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
-                  </svg>
-                  WhatsApp
                 </a>
               </div>
             </motion.div>
@@ -192,8 +184,7 @@ function Contact() {
               </h2>
               <p className="quote-subtext">
                 Fill in the form and we'll send you a detailed quote
-                within 24 hours. For urgent requirements, WhatsApp
-                us directly.
+                within 24 hours.
               </p>
 
               <div className="quote-info-list">
@@ -223,11 +214,7 @@ function Contact() {
               {/* Office Info */}
               <div className="office-box">
                 <h4>Our Office</h4>
-                <p>
-                  <br />
-                  Chitra GIDC, Surat,<br />
-                  Gujarat — 364004
-                </p>
+                <p>Surat, Gujarat</p>
                 <div className="office-hours">
                   <span>Mon–Fri: 9 AM – 7 PM</span>
                   <span>Sat: 9 AM – 5 PM</span>
@@ -246,9 +233,9 @@ function Contact() {
                   transition={{ duration: 0.5 }}
                 >
                   <div className="success-icon">✓</div>
-                  <h3>Message Sent!</h3>
+                  <h3>Enquiry Sent!</h3>
                   <p>
-                    Your enquiry has been sent via WhatsApp. We'll get
+                    Thank you! We've received your enquiry and will get
                     back to you within 24 hours.
                   </p>
                   <button
@@ -341,12 +328,18 @@ function Contact() {
                     ></textarea>
                   </div>
 
-                  <button type="submit" className="form-submit-btn">
-                    Send via WhatsApp →
+                  {error && (
+                    <p style={{ color: "red", marginBottom: "12px", fontSize: "14px" }}>
+                      {error}
+                    </p>
+                  )}
+
+                  <button type="submit" className="form-submit-btn" disabled={loading}>
+                    {loading ? "Sending..." : "Send Enquiry →"}
                   </button>
 
                   <p className="form-note">
-                    Clicking submit opens WhatsApp with your message pre-filled.
+                    We'll reply to your email within 24 hours.
                   </p>
                 </form>
               )}
@@ -383,21 +376,15 @@ function Contact() {
         <div className="container cta-container">
           <p className="section-subtitle">QUICK CONNECT</p>
           <h2 className="cta-title">
-            Prefer to Call
-            <br />or WhatsApp?
+            Prefer to Call?
           </h2>
           <p className="cta-text">
             Our team is available Monday to Saturday. Reach us directly
             for fast responses on bulk orders and urgent requirements.
           </p>
           <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="tel:+919426272081">
+            <a href="tel:+919876543210">
               <button className="cta-btn">📞 Call Now</button>
-            </a>
-            <a href="https://wa.me/919426272081" target="_blank" rel="noreferrer">
-              <button className="cta-btn" style={{ background: "#25d366", color: "#fff" }}>
-                💬 WhatsApp Us
-              </button>
             </a>
           </div>
         </div>
@@ -407,7 +394,7 @@ function Contact() {
       <footer className="footer">
         <div className="container footer-container">
           <div className="footer-brand">
-            <h2>Print<span style={{ color: "#2563eb" }}>Verse</span></h2>
+            <h2>Print<span style={{ color: "#2563eb" }}>Vista</span></h2>
             <p>Our Passion Is Your Impression</p>
           </div>
           <div className="footer-links">
@@ -419,7 +406,6 @@ function Contact() {
           </div>
           <div className="footer-contact">
             <p>+91 98765 43210</p>
-            <p>+91 99999 99999</p>
             <p>info@printvista.com</p>
             <p>Surat, Gujarat</p>
           </div>

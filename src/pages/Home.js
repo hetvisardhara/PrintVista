@@ -393,7 +393,7 @@ function Home() {
 
               <div className="contact-info-box">
                 <h4>Our Office</h4>
-                <p><br />Chitra GIDC, Surat,<br />Gujarat — 364004</p>
+                <p><br />Surat, Surat,<br />Gujarat — 364004</p>
               </div>
 
               <div className="contact-info-box">

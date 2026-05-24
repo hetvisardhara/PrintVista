@@ -301,28 +301,6 @@ function Contact() {
         </div>
       </motion.section>
 
-      {/* ── MAP ── */}
-      <motion.section className="map-section" {...fadeUp}>
-        <div className="container">
-          <p className="section-subtitle">FIND US</p>
-          <h2 className="section-title" style={{ marginBottom: "40px" }}>
-            Our Location
-          </h2>
-          <div className="map-wrapper">
-            <iframe
-              title="Print Vista Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.3!2d72.15!3d21.77!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDQ2JzEyLjAiTiA3MsKwMDknMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
-              width="100%"
-              height="400"
-              style={{ border: 0, borderRadius: "24px" }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </div>
-      </motion.section>
-
       {/* ── CTA ── */}
       <section className="cta-section">
         <div className="container cta-container">

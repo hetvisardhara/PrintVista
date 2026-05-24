@@ -2,23 +2,28 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "../components/Navbar";
 
+// ── IMAGE IMPORTS ──
+import adhesivetapes from "../assets/adhesivetapes.jpeg";
+import chocolate from "../assets/chocolate.jpeg";
+import coffeesleves from "../assets/coffeesleves.jpeg";
+import custombags from "../assets/custombags.jpeg";
+import foodwrap from "../assets/foodwrap.jpeg";
+import slenderpaper from "../assets/slenderpaper.jpeg";
+import soap from "../assets/soap.jpeg";
+import visitingcards from "../assets/visitingcards.jpeg";
+
 const products = [
-  { id: 1, name: "Self Adhesive Tapes", category: "Packaging" },
-  { id: 2, name: "Multipurpose Slender Paper Pouches", category: "Packaging" },
-  { id: 3, name: "Custom Paper Bags", category: "Packaging" },
-  { id: 4, name: "Wrapping Paper", category: "Packaging" },
-  { id: 5, name: "Custom Coffee Sleeves", category: "Packaging" },
-  { id: 6, name: "Chocolate Boxes", category: "Boxes" },
-  { id: 7, name: "Soap Boxes", category: "Boxes" },
-  { id: 8, name: "Visiting Cards", category: "Stationery" },
+  { id: 1, name: "Self Adhesive Tapes", category: "Packaging", img: adhesivetapes },
+  { id: 2, name: "Multipurpose Slender Paper Pouches", category: "Packaging", img: slenderpaper },
+  { id: 3, name: "Custom Paper Bags", category: "Packaging", img: custombags },
+  { id: 4, name: "Wrapping Paper", category: "Packaging", img: foodwrap },
+  { id: 5, name: "Custom Coffee Sleeves", category: "Packaging", img: coffeesleves },
+  { id: 6, name: "Chocolate Boxes", category: "Boxes", img: chocolate },
+  { id: 7, name: "Soap Boxes", category: "Boxes", img: soap },
+  { id: 8, name: "Visiting Cards", category: "Stationery", img: visitingcards },
 ];
 
 const categories = ["All", "Packaging", "Boxes", "Stationery"];
-
-const placeholderColors = [
-  "#EEF2FF", "#F0FDF4", "#FFF7ED", "#FDF2F8",
-  "#F0F9FF", "#FEFCE8", "#FFF1F2", "#F7FEE7",
-];
 
 function Portfolio() {
 
@@ -105,12 +110,22 @@ function Portfolio() {
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                   whileHover={{ y: -10 }}
                   onClick={() => setSelected(product)}
-                  style={{
-                    background: placeholderColors[product.id % placeholderColors.length],
-                  }}
                 >
-                  <div className="portfolio-page-placeholder">
-                    <span className="placeholder-icon">◈</span>
+                  {/* Real image */}
+                  <img
+                    src={product.img}
+                    alt={product.name}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      borderRadius: "20px",
+                      display: "block",
+                    }}
+                  />
+
+                  {/* Hover overlay */}
+                  <div className="portfolio-page-overlay">
                     <h3>{product.name}</h3>
                     <p>{product.category}</p>
                   </div>
@@ -139,9 +154,7 @@ function Portfolio() {
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ duration: 0.3 }}
               onClick={(e) => e.stopPropagation()}
-              style={{
-                background: placeholderColors[selected.id % placeholderColors.length],
-              }}
+              style={{ background: "#fff" }}
             >
               <button
                 className="lightbox-close"
@@ -149,9 +162,20 @@ function Portfolio() {
               >
                 ✕
               </button>
-              <div className="lightbox-placeholder">
-                <span className="placeholder-icon-lg">◈</span>
+
+              {/* Lightbox image */}
+              <div className="lightbox-placeholder" style={{ padding: 0, overflow: "hidden" }}>
+                <img
+                  src={selected.img}
+                  alt={selected.name}
+                  style={{
+                    width: "100%",
+                    height: "280px",
+                    objectFit: "cover",
+                  }}
+                />
               </div>
+
               <div className="lightbox-info">
                 <p className="lightbox-category">{selected.category}</p>
                 <h2>{selected.name}</h2>
@@ -199,7 +223,7 @@ function Portfolio() {
             <a href="/contact">Contact</a>
           </div>
           <div className="footer-contact">
-            <p>+91 98765 43210</p>
+            <p>+91 99999 99999</p>
             <p>info@printvista.com</p>
             <p>Surat, Gujarat</p>
           </div>

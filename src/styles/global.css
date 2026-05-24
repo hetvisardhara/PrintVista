@@ -2269,3 +2269,38 @@ body::before {
     grid-template-columns: 1fr;
   }
 }
+/* ── PORTFOLIO IMAGE CARD ── */
+.portfolio-page-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-page-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  opacity: 0;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.portfolio-page-card:hover .portfolio-page-overlay {
+  opacity: 1;
+}
+
+.portfolio-page-overlay h3 {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.portfolio-page-overlay p {
+  color: #ddd;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}

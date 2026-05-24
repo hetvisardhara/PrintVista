@@ -3,29 +3,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "../components/Navbar";
 
 const products = [
-  { id: 1, name: "1 Liter Box", category: "Food & Beverage", img: null },
-  { id: 2, name: "250ml Box", category: "Food & Beverage", img: null },
-  { id: 3, name: "4-5 Liter Box", category: "Food & Beverage", img: null },
-  { id: 4, name: "700ml Box", category: "Food & Beverage", img: null },
-  { id: 5, name: "Agriculture Box", category: "Agriculture", img: null },
-  { id: 6, name: "Candy Box", category: "Food & Beverage", img: null },
-  { id: 7, name: "Chowpati Box", category: "Food & Beverage", img: null },
-  { id: 8, name: "Cone", category: "Food & Beverage", img: null },
-  { id: 9, name: "Dangle Toran", category: "Stationery", img: null },
-  { id: 10, name: "Cup & Cone Lid", category: "Food & Beverage", img: null },
-  { id: 11, name: "Hair Care Box", category: "Personal Care", img: null },
-  { id: 12, name: "Instant Mix Box", category: "Food & Beverage", img: null },
-  { id: 13, name: "Letter Pad", category: "Stationery", img: null },
-  { id: 14, name: "Masala Box", category: "Food & Beverage", img: null },
-  { id: 15, name: "Menu Card", category: "Stationery", img: null },
-  { id: 16, name: "Pharma Box", category: "Pharma", img: null },
-  { id: 17, name: "Ice Cream Box", category: "Food & Beverage", img: null },
-  { id: 18, name: "Custom Packaging", category: "Personal Care", img: null },
+  { id: 1, name: "Self Adhesive Tapes", category: "Packaging" },
+  { id: 2, name: "Multipurpose Slender Paper Pouches", category: "Packaging" },
+  { id: 3, name: "Custom Paper Bags", category: "Packaging" },
+  { id: 4, name: "Wrapping Paper", category: "Packaging" },
+  { id: 5, name: "Custom Coffee Sleeves", category: "Packaging" },
+  { id: 6, name: "Chocolate Boxes", category: "Boxes" },
+  { id: 7, name: "Soap Boxes", category: "Boxes" },
+  { id: 8, name: "Visiting Cards", category: "Stationery" },
 ];
 
-const categories = ["All", "Food & Beverage", "Pharma", "Personal Care", "Agriculture", "Stationery"];
+const categories = ["All", "Packaging", "Boxes", "Stationery"];
 
-// Placeholder colors for cards without images
 const placeholderColors = [
   "#EEF2FF", "#F0FDF4", "#FFF7ED", "#FDF2F8",
   "#F0F9FF", "#FEFCE8", "#FFF1F2", "#F7FEE7",
@@ -167,9 +156,9 @@ function Portfolio() {
                 <p className="lightbox-category">{selected.category}</p>
                 <h2>{selected.name}</h2>
                 <p className="lightbox-desc">
-                  Premium quality {selected.name.toLowerCase()} designed
-                  and manufactured with precision offset printing and
-                  custom packaging solutions.
+                  Premium quality {selected.name.toLowerCase()} crafted
+                  with precision printing and custom packaging solutions
+                  tailored to your brand.
                 </p>
               </div>
             </motion.div>
@@ -198,34 +187,29 @@ function Portfolio() {
       {/* ── FOOTER ── */}
       <footer className="footer">
         <div className="container footer-container">
-
           <div className="footer-brand">
             <h2>Print<span style={{ color: "#2563eb" }}>Vista</span></h2>
             <p>Our Passion Is Your Impression</p>
           </div>
-
           <div className="footer-links">
             <a href="/">Home</a>
             <a href="/about">About</a>
             <a href="/portfolio">Portfolio</a>
+            <a href="/clients">Our Clients</a>
             <a href="/contact">Contact</a>
           </div>
-
           <div className="footer-contact">
-            <p>+91 XXXXX XXXXX</p>
+            <p>+91 98765 43210</p>
             <p>info@printvista.com</p>
             <p>Surat, Gujarat</p>
           </div>
-
         </div>
         <div className="footer-bottom">
-          <p>© 2026 All Rights Reserved —Print Vista</p>
+          <p>© 2026 All Rights Reserved — Print Vista</p>
         </div>
       </footer>
-
     </>
   );
-
 }
 
 export default Portfolio;

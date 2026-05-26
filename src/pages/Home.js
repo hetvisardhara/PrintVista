@@ -327,19 +327,21 @@ function Home() {
             <div className="bold-cta-left">
               <span className="bold-cta-tag">READY TO START?</span>
               <h2 className="bold-cta-title">
-                Have a
-                <br />Packaging Idea?
+                Bring Your
+<br />Packaging
+<br />Vision Alive.
               </h2>
               <p className="bold-cta-text">
-                We craft premium packaging, luxury branding and
-                print experiences built specifically for your brand.
+                Premium print, bold branding and packaging built
+                to make your product unforgettable on every shelf.
               </p>
               <div className="bold-cta-buttons">
                 <a href="/contact">
-                  <button className="bold-cta-btn-outline">Contact Us</button>
+                 <button className="bold-cta-btn-outline">Talk to Us</button>
                 </a>
                 <a href="/contact">
-                  <button className="bold-cta-btn-fill">Request Quote →</button>
+              <button className="bold-cta-btn-fill">Get a Free Quote →</button>
+
                 </a>
               </div>
             </div>

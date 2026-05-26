@@ -2514,4 +2514,145 @@ body::before {
     grid-template-columns: 1fr;
   }
 }
- 
+ /* ── BOLD CTA FIX ── */
+.bold-cta-section {
+  padding: 140px 0;
+  background: #f8fafc;
+}
+
+.bold-cta-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.bold-cta-left {
+  text-align: left;
+}
+
+.bold-cta-tag {
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.bold-cta-title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -3px;
+  color: #111;
+  margin-bottom: 24px;
+}
+
+.bold-cta-text {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+
+.bold-cta-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.bold-cta-btn-outline {
+  padding: 16px 36px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1.5px solid #ccc;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  color: #111;
+  transition: 0.3s;
+}
+
+.bold-cta-btn-outline:hover {
+  border-color: #111;
+  background: #111;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.bold-cta-btn-fill {
+  padding: 16px 36px;
+  border-radius: 999px;
+  background: #2563eb;
+  border: 1.5px solid #2563eb;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.bold-cta-btn-fill:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.25);
+}
+
+.bold-cta-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bold-cta-feature {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.bold-cta-feature:hover {
+  border-color: #2563eb;
+  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.08);
+  transform: translateX(6px);
+}
+
+.bold-cta-feature-icon {
+  font-size: 22px;
+  color: #2563eb;
+  opacity: 0.4;
+  flex-shrink: 0;
+}
+
+.bold-cta-feature h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #111;
+}
+
+.bold-cta-feature p {
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+}
+
+@media(max-width: 900px) {
+  .bold-cta-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .bold-cta-title {
+    font-size: 44px;
+    letter-spacing: -2px;
+  }
+}

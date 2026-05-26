@@ -2656,3 +2656,34 @@ body::before {
     letter-spacing: -2px;
   }
 }
+/* ── BOLD CTA LEFT FIX ── */
+.bold-cta-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.bold-cta-title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -3px;
+  color: #111;
+  margin-bottom: 20px;
+  margin-top: 12px;
+}
+
+.bold-cta-text {
+  font-size: 17px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 32px;
+  max-width: 420px;
+}
+
+.bold-cta-buttons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}

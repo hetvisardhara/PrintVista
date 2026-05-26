@@ -313,7 +313,8 @@ function Home() {
           </div>
         </motion.section>
 
-        {/* ── BOLD CTA SECTION ── */}
+
+{/* ── BOLD CTA SECTION ── */}
         <motion.section
           className="bold-cta-section"
           initial={{ opacity: 0, y: 60 }}
@@ -321,28 +322,56 @@ function Home() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className="container bold-cta-container">
-            <p className="bold-cta-tag">READY TO START?</p>
-            <h2 className="bold-cta-title">
-              Have a Packaging Idea?
-              <br />Let's Make It Premium.
-            </h2>
-            <p className="bold-cta-text">
-              We craft modern packaging, luxury branding, and premium print
-              experiences for ambitious brands.
-            </p>
-            <div className="bold-cta-buttons">
-              <a href="/contact">
-                <button className="bold-cta-btn-outline">Contact Us</button>
-              </a>
-              <a href="/contact">
-                <button className="bold-cta-btn-fill">Request Quote →</button>
-              </a>
+          <div className="container bold-cta-inner">
+
+            <div className="bold-cta-left">
+              <span className="bold-cta-tag">READY TO START?</span>
+              <h2 className="bold-cta-title">
+                Have a
+                <br />Packaging Idea?
+              </h2>
+              <p className="bold-cta-text">
+                We craft premium packaging, luxury branding and
+                print experiences built specifically for your brand.
+              </p>
+              <div className="bold-cta-buttons">
+                <a href="/contact">
+                  <button className="bold-cta-btn-outline">Contact Us</button>
+                </a>
+                <a href="/contact">
+                  <button className="bold-cta-btn-fill">Request Quote →</button>
+                </a>
+              </div>
             </div>
+
+            <div className="bold-cta-right">
+              <div className="bold-cta-feature">
+                <span className="bold-cta-feature-icon">◈</span>
+                <div>
+                  <h4>Free Consultation</h4>
+                  <p>Talk to our team about your packaging needs</p>
+                </div>
+              </div>
+              <div className="bold-cta-feature">
+                <span className="bold-cta-feature-icon">◎</span>
+                <div>
+                  <h4>Custom Quote in 24hrs</h4>
+                  <p>Get a detailed quote tailored to your order</p>
+                </div>
+              </div>
+              <div className="bold-cta-feature">
+                <span className="bold-cta-feature-icon">◉</span>
+                <div>
+                  <h4>On-Time Delivery</h4>
+                  <p>Reliable dispatch every time, no exceptions</p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </motion.section>
 
-       <Footer />
+        <Footer />
       </div>
     </>
   );
